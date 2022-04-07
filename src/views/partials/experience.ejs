@@ -1,0 +1,32 @@
+<div class="experience">
+    <h2 class="experience__hl">Work experience</h2>
+   <% if (user.jobtitle1 != '') { %>
+    <div class="experience__info">
+        <h3 class="experience__title"><%= user.jobtitle1 %> |<%= user.jobdate1 %></h3>
+        <h4 class="exp__subtitle"><%= user.jobsubtitle1 %></h4>
+        <p class="exp__text"><%= user.jobcomment1 %></p>
+    </div>
+   <% } %>
+    <% if (user.jobtitle2 != '') { %>
+    <div class="exp-info">
+        <h3 class="exp__title"><%= user.jobtitle2 %> |<%= user.jobdate2 %></h3>
+        <h4 class="exp__subtitle"><%= user.jobsubtitle2 %></h4>
+        <p class="exp__text"><%= user.jobcomment2 %></p>
+    </div>
+   <% } %>
+   <h2 class="body-hl">Educational background</h2>
+    <% if (user.studytitle1) { %>
+        <div class="exp__info">
+            <h3 class="exp__title"><%= user.studytitle1 %> | <%= user.studydate1 %></h3>
+            <h4 class="exp__subtitle"><%= user.studysubtitle1 %></h4>
+        </div>
+    <% } %>
+    <% if (user.studytitle2) { %>
+        <div class="exp__info">
+            <h3 class="exp__title"><%= user.studytitle2 %> | <%= user.studydate2 %></h3>
+            <h4 class="exp__subtitle"><%= user.studysubtitle2 %></h4>
+        </div>
+    <% } %>
+    <h2 class="body-hl">References</h2>
+    <h3 class="exp__title">Referencias de los pibes</h3>
+</div>

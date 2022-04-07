@@ -1,0 +1,266 @@
+:root {
+    --text-color2: #666;
+    --bg-color: rgb(0, 0, 0);
+    --text-color: #fff;
+}
+* {
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+
+html {
+    font-size: 10px
+}
+
+.detail {
+    color: var(--text-color);
+    margin: 0;
+    padding: 1rem;
+    background-color:var(--bg-color)
+}
+
+.detail__btncont {
+    width: 20%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.detail__btn {
+    padding: 0.5rem 1.4rem 0.5rem 1.4rem;
+    border: none;
+    border-radius: 0.6rem;
+    font-size: 1.1rem;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.detail__btn:hover {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    padding: 0.4rem 1.3rem 0.4rem 1.3rem;
+    border: 0.1rem solid var(--text-color);
+}
+
+.detail__name, .detail__position{
+    text-align: center;
+}
+
+.detail__name {
+    font-size: 2.5rem
+}
+
+.profile {
+    width: 50%;
+    height: 200px;
+    margin: 1.5rem auto 1rem auto;
+    border: 1px solid #fff;
+    overflow: hidden;
+}
+
+.profile__img {
+    display: block;
+    max-width: 100%;
+    max-height: 100%;
+    
+}
+
+.about {
+    margin: 1rem 0;
+}
+
+.about__hl, 
+.contact__hl,
+.skills__hl {
+    display:inline-block;
+    margin-bottom: 0.5rem;
+}
+
+.contact {
+    margin-bottom: 1rem;
+}
+
+.contact__info, .skills-cont ul li {
+    display: flex;
+    margin: 0.5rem 0;
+}
+
+.contact__icon{
+    display: block;
+    margin-right: 1rem;
+}
+
+.contact__link {
+    text-decoration: none;
+    color: var(--text-color);
+    cursor: pointer;
+}
+
+.skills {
+    margin-bottom: 1rem;
+}
+
+.experience {
+    margin-top: 1rem;
+    padding: 1.5rem 1rem 1rem 1rem;
+    border-top: 0.5rem solid var(--bg-color);
+    color: var(--text-color2);
+}
+
+.experience__hl {
+    margin: 1rem 0 0.5rem 0;
+}
+
+.experience__title,
+.experience__subtitle {
+    margin: 0.5rem 0;
+}
+
+.skill__tech {
+    margin-bottom: 0.3rem;
+}
+
+.skill__bar,
+.skill__bar::after {
+    width: 170px;
+    height: 8px;
+    background-color: var(--bg-color);
+    border-radius: 15px;
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 1rem;
+}
+
+.skill__bar::after {
+    content: "";
+    position: absolute;
+    background-color: var(--text-color);
+    transition: color 0.1s, background-color 0.1s, ease-in-out;
+    left: -170px;
+    animation: skill-bar-filler 1s ease-in-out forwards;
+}
+
+.skill-bar--1::after {
+    --skill-bar-length:10%
+}
+
+.skill-bar--2::after {
+   --skill-bar-length: 20%
+}
+
+.skill-bar--3::after {
+    --skill-bar-length: 30%
+ }
+
+ .skill-bar--4::after {
+    --skill-bar-length: 40%
+ }
+  
+ .skill-bar--5::after {
+    --skill-bar-length: 50%
+ }
+ 
+ .skill-bar--6::after {
+    --skill-bar-length: 60%
+ }
+  
+ .skill-bar--7::after {
+    --skill-bar-length: 70%
+ }
+  
+ .skill-bar--8::after {
+    --skill-bar-length: 80%
+ }
+  
+ .skill-bar--9::after {
+    --skill-bar-length: 90%
+ }
+  
+ .skill-bar--10::after {
+    --skill-bar-length: 100%
+ }
+@keyframes skill-bar-filler {
+    to{
+        transform: translateX(var(--skill-bar-length));
+    }
+}
+
+.body__black {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+}
+
+
+.form__container {
+    width: 75%;
+    margin: 2rem auto;
+    text-align: center;
+    border: 2px solid var(--text-color);
+    padding: 2rem;
+}
+
+.form__label {
+    display: inline-block;
+    margin: 1rem 0;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.form__input {
+    padding: 0.3rem;
+    width: 100%;
+    max-width: 250px;
+    margin: 0 auto;
+    border: none;
+    border-radius: 1rem;
+}
+
+.form__input::placeholder {
+    text-align: center;
+    color: var(--text-color2);
+}
+
+.form__cont {
+    display:flex;
+    flex-direction: column;
+    margin: 2rem 0;
+}
+
+.form__btn {
+    margin: 1rem 0rem 0rem 0rem;
+    padding: 0.4rem 1.5rem;
+    border: none;
+    font-weight: bold;
+    border-radius: 1rem;
+}
+
+.form__btn:hover{
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    padding: 0.3rem 1.4rem;
+    border: 1px solid var(--text-color);
+    cursor: pointer;
+}
+
+.edit{
+    width: 75%;
+    margin: 0 auto;
+    border: 2px solid var(--text-color);
+}
+
+.edit__img {
+    display:block;
+    width: 100%;
+    height: 100%
+}
+
+.edit__avatar-cont {
+    width: 40%;
+    height: 40%;
+}
+
+
+
+

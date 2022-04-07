@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <%- include ('./partials/head') %>
+    <title>Edit Profile</title>
+</head>
+
+<body class="body__black">
+    <div class="form__container">
+        <h1 class="edit__hl">Editar Perfil</h1>
+        <form class="form" action="./edit?_method=PUT" method="POST" enctype="multipart/form-data">
+            <h2 class="edit__text">Avatar actual</h2>
+            <div class="edit__avatar-cont">
+                <img src="<%= user.avatar %>" alt="<%= user.name %>" class="edit__img">
+            </div>
+            <div class="edit__new-avatar">
+                <label for="avatar" class="edit__text">Nueva imagen de perfil</label>
+                <input type="file" name="avatar" id="avatar" value="<%= user.avatar %>">
+                <div class="form__btncont">
+                    <button type="submit" class="form__btn">Subir imagen</button>
+                </div>
+            </div>
+        </form>
+        <form class="form" action="./edit?_method=PUT" method="POST">
+            <div class="form__cont">
+                <label for="name" class="form__label">Nombre de usuario</label>
+                <input class="form__input" type="text" id="name" name="name" placeholder="Cambiar nombre" value="<%= user.name %>"> 
+            </div>
+            <div class="form__cont">
+                <label for="position" class="form__label">Cargo</label>
+                <input class="form__input" type="text" id="position" name="position" value="<%= user.position %>" placeholder="Cambiar cargo"> 
+            </div>
+            <div class="form__cont">
+                <label for="about" class="form__label">Sobre mi</label>
+                <textarea class="form__textarea" name="about" id="about" cols="30" rows="10" value="<%= user.about %>" placeholder="Cuento cosas sobre mi"></textarea> 
+            </div>
+            <div class="form__cont">
+                <label for="phone" class="form__label">Numero de telefono</label>
+                <input class="form__input" type="text" kid="phone" name="phone" id="phone" name="phone" value="<%= user.phone %>" placeholder="Cambiar numero" oninvalid="this.setCustomValidity('Solo numeros y tambien codigo de area')" oninput="setCustomValidity('')"> 
+            </div>
+            <div class="form__btncont">
+                <button type="submit" class="form__btn">Editar</button>
+            </div>
+        </form> 
+</div> </body> </html>

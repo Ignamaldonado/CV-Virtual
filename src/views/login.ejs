@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include('./partials/head')  %> 
+    <title>Login</title>
+</head>
+<body class="body__black">
+    <div class="form__container">
+        <h1>ACA NOS LOGUEAMOS PAPU</h1>
+        <form class="form" action="./login" method="POST">
+            <div class="form__cont">
+                <label class="form__label" for="email">Email</label>
+                <input class="form__input" type="email" id="email" name="email" placeholder="ej@mail.com" required oninvalid="this.setCustomValidity('Rellena un email valido')" oninput="setCustomValidity('')">
+            </div>   
+            <div class="form__cont">
+                <label class="form__label" for="password">Contrasenia</label>
+                <input class="form__input" type="password" id="password" name="password" placeholder="********" required oninvalid="this.setCustomValidity('Rellena campo de Contrasenia')" oninput="setCustomValidity('')">
+            </div>  
+            <div class="form__btncont">
+                <button type="submit" class="form__btn">login</button>
+            </div> 
+        </form>
+    </div>
+</body>
+</html>

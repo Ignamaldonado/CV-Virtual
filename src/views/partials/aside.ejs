@@ -1,0 +1,46 @@
+<div class="detail">
+    <div class="detail__btncont">
+        <a href="./login">
+            <button class="detail__btn">log in</button>
+        </a>
+    </div>
+    <h1 class="detail__name"><%= user.name %></h1>
+    <h2 class="detail__position"><%= user.position %></h2>
+    <div class="profile">
+        <img src="<%= user.avatar %>" alt="<%= user.name %>" class="profile__img">
+    </div>
+    <div class="about">
+        <h2 class="about__hl">Sobre mi</h2>
+        <p class='about__txt'><%= user.about %></p>
+    </div>
+    <div class="contact">
+        <h2 class="contact__hl">Contact</h2>
+        <div class="contact__info">
+            <i class="fa-solid fa-phone contact__icon"></i>
+            <p class="contact__text">+<%= user.phone %></p>
+        </div>
+        <div class="contact__info">
+            <i class="fa-solid fa-envelope contact__icon"></i>
+            <p class="contact__text"><%= user.email %></p>
+        </div>
+        <div class="contact__info">
+            <i class="fa-solid fa-globe contact__icon"></i>
+            <a href="https://<%= user.web %>" class="contact__link">
+                <p class="contact__text"><%= user.web %></p>
+            </a>
+        </div>
+        <div class="contact__info">
+            <i class="fa-solid fa-location-dot contact__icon"></i>
+            <p class="contact__text"><%= user.location %></p>
+        </div>
+    </div>
+    <div class="skills">
+        <h2 class="skills__hl">Skills</h2>
+           <% for( let i = 8; i < 14 ; i++ ) { %>
+            <div class="skill">
+                <p class="skill__tech"><%= Object.keys(user)[i]%></p>
+                <div class="skill__bar skill-bar--<%= Object.values(user)[i] %>"></div>
+            </div>
+           <% } %>
+    </div>
+</div>
