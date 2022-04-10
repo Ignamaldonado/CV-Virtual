@@ -10,12 +10,25 @@
         <form class="form" action="./login" method="POST">
             <div class="form__cont">
                 <label class="form__label" for="email">Email</label>
-                <input class="form__input" type="email" id="email" name="email" placeholder="ej@mail.com" required oninvalid="this.setCustomValidity('Rellena un email valido')" oninput="setCustomValidity('')">
+                <input class="form__input" type="email" id="email" name="email" placeholder="ej@email.com" oninvalid="this.setCustomValidity('Tienes que ingresar un Email')" oninput="setCustomValidity('')" value="<%= locals.old && locals.old.email ? locals.old.email : '' %>">
             </div>   
             <div class="form__cont">
                 <label class="form__label" for="password">Contrasenia</label>
-                <input class="form__input" type="password" id="password" name="password" placeholder="********" required oninvalid="this.setCustomValidity('Rellena campo de Contrasenia')" oninput="setCustomValidity('')">
-            </div>  
+                <input class="form__input" type="password" id="password" name="password" pattern="^(?=.*[A-Za-z])(?=.*[0-9])[A-Za-z0-9]{8,15}$" placeholder="********" oninvalid="this.setCustomValidity('La contrasenia debe tener una letra, un numero y tener un rango de 8 a 15 caracteres')" oninput="setCustomValidity('')">
+                <p class="contact__text">* La contrasenia debe tener al menos una letra, un numero y un rango de 8 a 15 caracteres</p>
+                <% if (locals.errors) { %>
+                    <% for( let i = 0; i < errors.length; i++ ) { %>
+                    <p class="form__error"> <%= errors[i].msg %></p>
+                    <% } %>
+                <% } %>
+            </div>
+    <% if (locals.changepassword) { %>
+    <div class="detail__btncont detail__btncont2">
+        <a href="./password">
+            <button class="detail__btn">Modificar clave</button>
+        </a>
+    </div> 
+    <% } %>
             <div class="form__btncont">
                 <button type="submit" class="form__btn">login</button>
             </div> 

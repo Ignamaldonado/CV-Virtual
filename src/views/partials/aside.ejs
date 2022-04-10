@@ -1,9 +1,22 @@
 <div class="detail">
-    <div class="detail__btncont">
-        <a href="./login">
-            <button class="detail__btn">log in</button>
-        </a>
-    </div>
+    <% if (loggedUser == undefined) { %>
+        <div class="detail__btncont detail__btncont2">
+            <a href="./password">
+                <button class="detail__btn">Modificar clave</button>
+            </a>
+        </div>
+        <div class="detail__btncont">
+            <a href="./login">
+                <button class="detail__btn">Log In</button>
+            </a>
+        </div>
+    <% }  else { %>
+        <div class="detail__btncont">
+            <a href="./edit">
+                <button class="detail__btn">Edit</button>
+            </a>
+        </div>
+    <% } %>
     <h1 class="detail__name"><%= user.name %></h1>
     <h2 class="detail__position"><%= user.position %></h2>
     <div class="profile">

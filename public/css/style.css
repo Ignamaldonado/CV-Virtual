@@ -113,8 +113,7 @@ html {
     margin: 1rem 0 0.5rem 0;
 }
 
-.experience__title,
-.experience__subtitle {
+.experience__title{
     margin: 0.5rem 0;
 }
 
@@ -131,6 +130,10 @@ html {
     position: relative;
     overflow: hidden;
     margin-bottom: 1rem;
+}
+
+.experience__info {
+    margin: 1rem 0;
 }
 
 .skill__bar::after {
@@ -195,7 +198,7 @@ html {
 
 .form__container {
     width: 75%;
-    margin: 2rem auto;
+    margin: 18% auto;
     text-align: center;
     border: 2px solid var(--text-color);
     padding: 2rem;
@@ -209,7 +212,7 @@ html {
 }
 
 .form__input {
-    padding: 0.3rem;
+    padding: 0.4rem;
     width: 100%;
     max-width: 250px;
     margin: 0 auto;
@@ -219,6 +222,7 @@ html {
 
 .form__input::placeholder {
     text-align: center;
+    margin-left: 1rem;
     color: var(--text-color2);
 }
 
@@ -226,6 +230,11 @@ html {
     display:flex;
     flex-direction: column;
     margin: 2rem 0;
+}
+
+.form__cont p {
+    display: inline-block;
+    margin-top: 1rem;
 }
 
 .form__btn {
@@ -242,6 +251,16 @@ html {
     padding: 0.3rem 1.4rem;
     border: 1px solid var(--text-color);
     cursor: pointer;
+}
+
+.form__error {
+    color:red;
+    font-size: 1.8rem;
+    font-weight: bold;
+}
+
+.form {
+    text-align: center;
 }
 
 .edit{
@@ -261,6 +280,22 @@ html {
     height: 40%;
 }
 
+.auth__cont {
+    padding: 0 2rem;
+    position: relative;
+    margin: 5rem auto;
+    top: 50%;
+    transform: translateY(50%)
+}
+
+.auth__btncont {
+   margin-top: 2rem;
+}
+
+.detail__btncont2 {
+    width: 50%;
+    margin: 0.5rem auto 1rem auto;
+}
 
 
 
