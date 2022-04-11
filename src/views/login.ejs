@@ -6,7 +6,7 @@
 </head>
 <body class="body__black">
     <div class="form__container">
-        <h1>ACA NOS LOGUEAMOS PAPU</h1>
+        <h1>Ingresar</h1>
         <form class="form" action="./login" method="POST">
             <div class="form__cont">
                 <label class="form__label" for="email">Email</label>
@@ -22,17 +22,17 @@
                     <% } %>
                 <% } %>
             </div>
-    <% if (locals.changepassword) { %>
-    <div class="detail__btncont detail__btncont2">
-        <a href="./password">
-            <button class="detail__btn">Modificar clave</button>
-        </a>
-    </div> 
-    <% } %>
             <div class="form__btncont">
                 <button type="submit" class="form__btn">login</button>
             </div> 
         </form>
+        <% if (locals.changepassword) { %>
+            <div class="detail__btncont detail__btncontm2">
+                <a href="./password">
+                    <button class="detail__btn">Modificar clave</button>
+                </a>
+            </div> 
+        <% } %>
     </div>
 </body>
 </html>

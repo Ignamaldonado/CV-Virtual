@@ -1,0 +1,44 @@
+<div class="form__skills">
+    <p class="form__label">Habilidades</p>
+    <div class="form__radio">
+        <% for( let i = 8; i < 14 ; i++ ) { %>
+        <div class="form__radio__cont">
+            <label for="<%= Object.keys(user)[i] %>"
+                class="form__radio__label"><%= Object.keys(user)[i] %></label>
+            <select class="form__radio__btn" name="<%= Object.keys(user)[i] %>"
+                id=<%= Object.keys(user)[i] %>">
+                <option class="form__radio__txt" value="1"<% if (Object.values(user)[i] == 1 || undefined) { %>
+                    <%= 'selected' %>
+                   <% } %>>1</option>
+                <option class="form__radio__txt" value="2"<% if (Object.values(user)[i] == 2) { %>
+                    <%= 'selected' %>
+                   <% } %>>2</option>
+                <option class="form__radio__txt" value="3"<% if (Object.values(user)[i] == 3) { %>
+                    <%= 'selected' %>
+                   <% } %>>3</option>
+                <option class="form__radio__txt" value="4"<% if (Object.values(user)[i] == 4) { %>
+                    <%= 'selected' %>
+                   <% } %>>4</option>
+                <option class="form__radio__txt" value="5"<% if (Object.values(user)[i] == 5) { %>
+                    <%= 'selected' %>
+                   <% } %>>5</option>
+                <option class="form__radio__txt" value="6"<% if (Object.values(user)[i] == 6) { %>
+                    <%= 'selected' %>
+                   <% } %>>6</option>
+                <option class="form__radio__txt" value="7"<% if (Object.values(user)[i] == 7) { %>
+                    <%= 'selected' %>
+                   <% } %>>7</option>
+                <option class="form__radio__txt" value="8"<% if (Object.values(user)[i] == 8) { %>
+                    <%= 'selected' %>
+                   <% } %>>8</option>
+                <option class="form__radio__txt" value="9"<% if (Object.values(user)[i] == 9) { %>
+                    <%= 'selected' %>
+                   <% } %>>9</option>
+                <option class="form__radio__txt" value="10"<% if (Object.values(user)[i] == 10) { %>
+                    <%= 'selected' %>
+                   <% } %>>10</option>
+            </select>
+        </div>
+        <% } %>
+    </div>
+</div>

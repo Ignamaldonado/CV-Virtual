@@ -1,0 +1,60 @@
+<div class="form__experience">
+    <h2 class="edit__text">Experiencia Laboral</h2>
+    <div class="form__jobcont">
+        <div class="form__cont">
+            <label for="jobtitle" class="form__label">Nombre de la empresa a la que trabajo</label>
+            <input class="form__input" type="jobtitle" name="jobtitle" id="jobtitle" name="jobtitle"
+                value="<%= user.jobtitle %>" placeholder="Cambiar nombre de la empresa">
+        </div>
+        <div class="form__cont">
+            <label for="jobdate" class="form__label">Fecha en la que trabajo</label>
+            <input class="form__input" type="jobdate" name="jobdate" id="jobdate" name="jobdate"
+                value="<%= user.jobdate %>" placeholder="AAAA - AAAA">
+        </div>
+        <h2 class="edit__text">Estudios</h2>
+        <div class="form__cont">
+            <label for="jobsubtitle" class="form__label">Cargo que ejecuto</label>
+            <input class="form__input" type="jobsubtitle" name="jobsubtitle" id="jobsubtitle"
+                name="jobsubtitle" value="<%= user.jobsubtitle %>" placeholder="Cambiar cargo">
+        </div>
+        <div class="form__cont">
+            <label for="jobcomment" class="form__label">Descripcion del cargo</label>
+            <textarea class="form__textarea" name="jobcomment" id="jobcomment" cols="30" rows="10"
+                value="<%= user.jobcomment %>" placeholder="Comenta cosas sobre el cargo"></textarea>
+        </div>
+    </div>
+    <div class="form__jobcont">
+        <div class="form__cont">
+            <label for="studytitle1" class="form__label">Lugar de estudios</label>
+            <input class="form__input" type="studytitle1" name="studytitle1" id="studytitle1" name="studytitle1"
+                value="<%= user.studytitle1 %>" placeholder="Cambiar nombre del lugar donde estudio">
+        </div>
+        <div class="form__cont">
+            <label for="studydate1" class="form__label">Fecha en la que realizo los estudios</label>
+            <input class="form__input" type="studydate1" name="studydate1" id="studydate1" name="studydate1"
+                value="<%= user.studydate1 %>" placeholder="AAAA - AAAA">
+        </div>
+        <div class="form__cont">
+            <label for="studysubtitle1" class="form__label">Estudios que realizo</label>
+            <input class="form__input" type="studysubtitle1" name="studysubtitle1" id="studysubtitle1"
+                name="studysubtitle1" value="<%= user.studysubtitle1 %>" placeholder="Cambiar estudio">
+        </div>
+        <div class="form__jobcont">
+            <div class="form__cont">
+                <label for="studytitle2" class="form__label">Lugar de estudios</label>
+                <input class="form__input" type="studytitle2" name="studytitle2" id="studytitle2" name="studytitle2"
+                    value="<%= user.studytitle2 %>" placeholder="Cambiar nombre del lugar donde estudio">
+            </div>
+            <div class="form__cont">
+                <label for="studydate2" class="form__label">Fecha en la que realizo los estudios</label>
+                <input class="form__input" type="studydate2" name="studydate2" id="studydate2" name="studydate2"
+                    value="<%= user.studydate2 %>" placeholder="AAAA - AAAA" 
+                    >
+            </div>
+            <div class="form__cont">
+                <label for="studysubtitle2" class="form__label">Otros estudios</label>
+                <input class="form__input" type="studysubtitle2" name="studysubtitle2" id="studysubtitle2"
+                    name="studysubtitle2" value="<%= user.studysubtitle2 %>" placeholder="Cambiar estudio">
+            </div>
+    </div>
+</div>
