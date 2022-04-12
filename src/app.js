@@ -20,6 +20,6 @@ app.set ('views' , path.join(__dirname, '/views')) // directorio template engine
 
 app.use('/' , indexRoutes) // rooteo del index
 
-app.listen(3000 , () => {
+app.listen(process.env.PORT || 3000, () => {
     console.log('listening on port 3000')
 }) // arranca el server

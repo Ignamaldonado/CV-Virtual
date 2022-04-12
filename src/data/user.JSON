@@ -1,1 +1,27 @@
-{"name":"Ignacio Maldonado","position":"Estudiante desarrollo web ","avatar":"/img/avatars/avatar1649689303225.webp","about":"","phone":"541122835172","email":"ignacio.maldonado96@gmail.com","web":"youtube.com","location":"Buenos Aires, Argentina","HTML":"10","CSS":"7","Bootstrap":"5","JavaScript":"8","Python":"9","mySQL":"3","password":"$2b$10$10FB/G9K0RW1btuetKthJeIXGcOyJxO1gxeXtGEpKKyDD8xpkVGd2","jobtitle":"","jobdate":"","jobsubtitle":"","jobcomment":"","studytitle1":"UTN","studydate1":"2021 - 2022","studysubtitle1":"Estudiando Ingenieria en Sistemas de informacion","studytitle2":"DigitalHouse","studydate2":"2021 - 2022","studysubtitle2":"Estudiando desarrollo web"}
+{
+  "name": "Ignacio Maldonado",
+  "position": "Estudiante desarrollo web ",
+  "avatar": "/img/avatars/avatar1649689303225.webp",
+  "about": "",
+  "phone": "541122835172",
+  "email": "ignacio.maldonado96@gmail.com",
+  "web": "youtube.com",
+  "location": "Buenos Aires, Argentina",
+  "HTML": "10",
+  "CSS": "7",
+  "Bootstrap": "5",
+  "JavaScript": "8",
+  "Python": "9",
+  "mySQL": "3",
+  "password": "$2b$10$aqAwXiqrdHy1wZGQ72qituSaJLvZLUX7iuqJFjielAU1yP17RrfwK",
+  "jobtitle": "",
+  "jobdate": "",
+  "jobsubtitle": "",
+  "jobcomment": "",
+  "studytitle1": "UTN",
+  "studydate1": "2021 - 2022",
+  "studysubtitle1": "Estudiando Ingenieria en Sistemas de informacion",
+  "studytitle2": "DigitalHouse",
+  "studydate2": "2021 - 2022",
+  "studysubtitle2": "Estudiando desarrollo web"
+}
