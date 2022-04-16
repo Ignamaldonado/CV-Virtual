@@ -3,7 +3,7 @@
 
 <head>
     <%- include ('./partials/head') %>
-    <title>Edit Profile</title>
+    <title>Editar perfil</title>
 </head>
 
 <body class="body__black">
@@ -12,7 +12,12 @@
         <form class="form" action="./edit?_method=PUT" method="POST" enctype="multipart/form-data">
             <div class="form__cont">
                 <h2 class="edit__text">Avatar actual</h2>
-                <img src="<%= user.avatar %>" alt="<%= user.name %>" class="profile__img">
+                <img src="<% if (!user.avatar) { %>
+                    <%= '/img/avatars/defaultUser.png' %>
+                <% }  else {%>
+                    <%= user.avatar %>
+                <% } %>
+                 " alt="<%= user.name %>" class="profile__img">
                 <div class="edit__new-avatar">
                     <label for="avatar" class="edit__text">Nueva imagen de perfil</label>
                     <input type="file" name="avatar" id="avatar">

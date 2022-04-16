@@ -7,7 +7,7 @@ const path = require('path');// llamado controllers
 const auth = require('../middleware/authmiddleware')
 const guest = require('../middleware/guestmiddleware')
 
-const validator = [
+const validatorRegister = [
     check('email')
         .notEmpty()
         .withMessage('Tienes que completar el campo de email')
@@ -16,7 +16,28 @@ const validator = [
         .withMessage('Tienes que completar con un email valido'),
     check('password')
         .notEmpty()
-        .withMessage('Tienes que completar el campo de contraseña')
+        .withMessage('Tienes que completar el campo de contraseña'),
+    check('confirmPassword')
+        .notEmpty().withMessage("Tienes que confirmar la contraseña")
+        .custom((password,{req}) =>{
+            if(password !== req.body.password){
+                throw new Error('Las contraseñas no coinciden')     
+            }   
+        return true;
+        }
+    )      
+]   
+
+const validatorLogin = [
+    check('email')
+        .notEmpty()
+        .withMessage('Tienes que completar el campo de email')
+        .bail()
+        .isEmail()
+        .withMessage('Tienes que completar con un email valido'),
+    check('password')
+        .notEmpty()
+        .withMessage('Tienes que completar el campo de contraseña'),    
 ]   
 
 var storage = multer.diskStorage({
@@ -35,14 +56,17 @@ const router = express.Router(); // parametro enrutador de express
 
 router.get('/', controller.index); // rooteo de get
 
-router.get('/login' , guest , controller.login)
-router.post('/login', validator , controller.auth)
+router.get('/login', controller.loginview)
+router.post('/login', validatorLogin , controller.login)
 
-router.get('/password' , guest , controller.passchange)
-router.put('/password' , controller.passwordput)
+router.get('/password' , guest , controller.passchangeview)
+router.put('/password' , controller.passchange)
 
 router.get('/edit', auth , controller.editview)
-router.put('/edit', auth , uploadFile.single('avatar') , controller.editput)
+router.put('/edit', uploadFile.single('avatar') , controller.editput)
+
+router.get('/register', guest , controller.registerview)
+router.post('/register', guest, validatorRegister, controller.register)
 /*router.get('/check', (req,res) => {
     if (req.session.logged == undefined) {
         res.send('no te logueaste papu')

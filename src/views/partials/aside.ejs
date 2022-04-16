@@ -1,19 +1,19 @@
 <div class="detail">
     <% if (loggedUser == undefined) { %>
         <div class="detail__btncont detail__btncont2">
-            <a href="./password">
-                <button class="detail__btn">Modificar clave</button>
+            <a href="./register">
+                <button class="detail__btn">Registrarse</button>
             </a>
         </div>
         <div class="detail__btncont">
             <a href="./login">
-                <button class="detail__btn">Log In</button>
+                <button class="detail__btn">Ingresar</button>
             </a>
         </div>
     <% }  else { %>
         <div class="detail__btncont">
             <a href="./edit">
-                <button class="detail__btn">Edit</button>
+                <button class="detail__btn">Editar</button>
             </a>
         </div>
     <% } %>
@@ -27,7 +27,7 @@
         <p class='about__txt'><%= user.about %></p>
     </div>
     <div class="contact">
-        <h2 class="contact__hl">Contact</h2>
+        <h2 class="contact__hl">Contacto</h2>
         <div class="contact__info">
             <i class="fa-solid fa-phone contact__icon"></i>
             <p class="contact__text">+<%= user.phone %></p>
@@ -48,8 +48,8 @@
         </div>
     </div>
     <div class="skills">
-        <h2 class="skills__hl">Skills</h2>
-           <% for( let i = 8; i < 14 ; i++ ) { %>
+        <h2 class="skills__hl">Habilidades</h2>
+           <% for( let i = 9; i < 15 ; i++ ) { %>
             <div class="skill">
                 <p class="skill__tech"><%= Object.keys(user)[i]%></p>
                 <div class="skill__bar skill-bar--<%= Object.values(user)[i] %>"></div>
