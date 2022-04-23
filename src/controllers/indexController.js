@@ -17,15 +17,13 @@ const controller = {
   },
 
   loginview: (req, res) => {
-    let comeFromEdit = false
-    res.render("login" , {comeFromEdit});
+    res.render("login");
   },
 
   login: (req, res) => {
-    let comeFromEdit = false
     let errors = validationResult(req);
     if (!errors.isEmpty()) {
-      return res.render("login", {
+        res.render("login", {
         errors: errors.array(),
         old: req.body,
         comeFromEdit
@@ -38,8 +36,7 @@ const controller = {
         res.render("login", {
           errors: [
             {
-              msg: "Email invalido",
-              comeFromEdit
+              msg: "Email invalido"
             },
           ],
         });
@@ -51,7 +48,6 @@ const controller = {
               {
                 msg: "Contraseña invalida",
                 old: req.body,
-                comeFromEdit
               },
             ],
             old: req.body,
@@ -79,7 +75,7 @@ const controller = {
     );
     let errors = validationResult(req)
     if (!errors.isEmpty()) {
-        return res.render("register", {
+            res.render("register", {
             errors: errors.array(),
             old: req.body,
           });
@@ -150,10 +146,11 @@ const controller = {
                 avatar = '/img/avatars/' + req.file.filename
                 user[i] = {id,name,position,avatar,about,phone,email,web,location,HTML,CSS,Bootstrap,JavaScript,Python,mySQL,password,jobtitle,jobdate,jobsubtitle,jobcomment,studytitle1,studydate1,studysubtitle1,studytitle2,studydate2,studysubtitle2}
             }
+            let savedSession = req.session.logged
             let editedUser = JSON.stringify(user)
             fs.writeFileSync(userFilePath,editedUser)
-            let comeFromEdit = true
-            res.render('login' , {comeFromEdit})
+            req.session.logged = savedSession
+            res.redirect('/')
           if (user[i] == user[user.length - 1] && user[i].email != req.session.logged) {
             res.send('se te fue el loggeo')
           }
