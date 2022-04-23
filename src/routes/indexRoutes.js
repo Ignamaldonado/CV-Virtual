@@ -66,7 +66,7 @@ router.get('/edit', auth , controller.editview)
 router.put('/edit', uploadFile.single('avatar') , controller.editput)
 
 router.get('/register', guest , controller.registerview)
-router.post('/register', guest, validatorRegister, controller.register)
+router.post('/register', validatorRegister, controller.register)
 /*router.get('/check', (req,res) => {
     if (req.session.logged == undefined) {
         res.send('no te logueaste papu')
